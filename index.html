@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>জাহিদ স্যার ম্যাথ একাডেমি</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+    <div class="background-glow"></div>
+
+    <nav class="glass-nav">
+        <div class="logo">📐 জাহিদ স্যার</div>
+        <div class="user-status" id="userStatus">
+            <span id="userIdDisplay">ID: Loading...</span>
+            <span class="badge free" id="subStatus">Free User</span>
+        </div>
+    </nav>
+
+    <header class="profile-section glass-card">
+        <div class="profile-content">
+            <div class="avatar">
+                <img src="https://via.placeholder.com/150" alt="Zahid Sir">
+            </div>
+            <div class="bio">
+                <h1>মোহাম্মদ জাহিদ হোসেন</h1>
+                <p class="designation">সিনিয়র গণিত শিক্ষক | বি.এসসি (অনার্স), এম.এসসি (গণিত)</p>
+                <p class="desc">দীর্ঘ ১৫ বছরের অভিজ্ঞতায় হাজারো শিক্ষার্থীকে গণিতের ভীতি দূর করে সাফল্যের পথে নিয়ে এসেছি। এখন অনলাইনেই সম্পূর্ণ গাইডলাইন।</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="filter-section">
+        <select id="classSelect" class="glass-input">
+            <option value="">ক্লাস নির্বাচন করুন</option>
+            <option value="9">নবম-দশম শ্রেণী</option>
+            <option value="11">একাদশ-দ্বাদশ শ্রেণী</option>
+            </select>
+        <select id="chapterSelect" class="glass-input">
+            <option value="">অধ্যায় নির্বাচন করুন</option>
+            </select>
+        <button id="searchBtn" class="glass-btn moving-btn">অনুসন্ধান করুন <i class="fas fa-search"></i></button>
+    </section>
+
+    <main id="videoGrid" class="video-grid">
+        </main>
+
+    <div id="premiumModal" class="modal-overlay hidden">
+        <div class="modal glass-card">
+            <h2>🔒 প্রিমিয়াম কন্টেন্ট</h2>
+            <p>এই ভিডিওর ফ্রি প্রিভিউ শেষ। সম্পূর্ণ ভিডিও দেখতে এবং ১ মাসের জন্য সব কন্টেন্ট আনলক করতে সাবস্ক্রাইব করুন।</p>
+            <div class="pricing">
+                <span class="price">৳২০০</span> / মাস
+            </div>
+            <button id="payBtn" class="glass-btn premium-btn">এখনই আনলক করুন (UddoktaPay)</button>
+            <button class="close-btn" onclick="closeModal()">পরে দেখব</button>
+        </div>
+    </div>
+
+    <script src="js/payment.js" type="module"></script>
+    <script src="js/main.js" type="module"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>
